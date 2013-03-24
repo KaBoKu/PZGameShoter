@@ -36,6 +36,7 @@
 				/info.htm=info
 				/zasady.htm=zasady
 				/=main
+				/rejestracja.htm=rejestracjaC
 			</beans:value>
 		</beans:property>
 
@@ -44,8 +45,12 @@
 	<beans:bean id="mainXML" class="pz.kus.game.HomeController"/>
 	<beans:bean id="infoXML" class="pz.kus.game.InfoController" />
 	<beans:bean id="zasadyXML" class="pz.kus.game.RulesController" /> -->
-	
-	<context:component-scan base-package="pz.kus.game" />
+	<beans:bean id="rejestracjaC" class="pz.kus.game.controller.RegistrationFromController" >
+		<beans:property name="formView" value="rejestracja" />
+		<beans:property name="successView" value="rejestracjaSukces" />
+		
+	</beans:bean>
+	<context:component-scan base-package="pz.kus.game.controller" />
 
 
 
